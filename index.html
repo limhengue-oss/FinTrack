@@ -3462,6 +3462,7 @@ async function fbLoad(){
     return true;
   } catch(e){ console.warn('Firestore load:', e); return false; }
 }
+async function fbSignIn(){
   if(!window._fb) return;
   try{
     await window._fb.signInWithPopup(window._fb.auth, window._fb.provider);
